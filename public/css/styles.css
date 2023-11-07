@@ -1,0 +1,340 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header div.logo,
+header .form{
+    width: 50%;
+}
+
+header div.logo{
+    padding: 10px;
+}
+
+header .form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+
+header nav{    
+    font-size: 12px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 30px;
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    width: 30px;
+}
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    opacity: 0;
+    margin-top: 20px;
+    transition: opacity 0.3s ease;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main article .fas{
+    transition: transform 0.3s ease;
+}
+
+main article .fas:hover{
+    transform: rotate(-90deg);    
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;   
+}
+
+article{
+    margin: 10px;
+}
+
+.product-desc-box {
+    position: relative;
+}
+
+footer{
+    background-color: #ebebeb;
+}
+
+/*Configuraciones para dispositivos móviles*/
+@media (min-width: 361px) and (max-width: 769px){    
+    header nav{
+        display: none;
+    }             
+}
+
+/*Configuraciones para dispositivos desktop*/
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+    div.burger-menu{
+        display: none;
+    }
+    header nav{    
+        font-size: 12px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    header {
+        display: flex;
+        background-color: #EAC926;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    div.top-header {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 5%;
+        flex-direction: row;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: center;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: space-between;
+        align-items: center;
+    }    
+    a{
+        padding: 10px;
+    }   
+    .description:hover{
+        opacity: 100;
+    }
+    footer{
+        display: flex;
+        background-color: #ebebeb;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: space-between;
+        justify-content: space-between
+    }
+    i.fas:hover{
+        color: #EAC926;
+    }
+    footer .copyright{
+        font-size: 8px;
+    }   
+}
+
+
+/*Configuraciones para box-shadow solamente*/
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }    
+    main section div.products article{
+        width: 45%;
+    }
+    .price,
+    .discount{
+        width: 50%;
+    }    
+}
+
+.register {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+}
+  
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+  
+input, textarea {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3 ease;
+}
+  
+button:hover {
+    background-color: #0022AA;
+}
