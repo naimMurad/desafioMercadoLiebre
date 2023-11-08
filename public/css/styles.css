@@ -206,11 +206,28 @@ footer{
 @media (min-width: 361px) and (max-width: 769px){    
     header nav{
         display: none;
+    }
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+    main section div.products article{
+        width: 45%;
     }             
 }
 
 /*Configuraciones para dispositivos desktop*/
 @media (min-width: 769px){
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: space-between;
+        justify-content: space-between;
+    }
     main section div.products article{
         width: 22%;
     }
@@ -264,7 +281,7 @@ footer{
         align-content: space-between;
         justify-content: space-between
     }
-    i.fas:hover{
+    footer i.fas:hover{
         color: #EAC926;
     }
     footer .copyright{
@@ -280,17 +297,8 @@ footer{
     }
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    main section div.products{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }    
-    main section div.products article{
-        width: 45%;
-    }
+    }     
+    
     .price,
     .discount{
         width: 50%;
